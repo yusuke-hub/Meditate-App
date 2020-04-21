@@ -9,11 +9,18 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    @IBOutlet var appName: UILabel!
+    
+    var timer = Timer()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    } 
+        timer = Timer.scheduledTimer(timeInterval: 3, target: self, selector: #selector(changeView), userInfo: nil, repeats: false)
+    }
+    
+    @objc func changeView(){
+        performSegue(withIdentifier: "next", sender: nil)
+    }
 
 
 }
