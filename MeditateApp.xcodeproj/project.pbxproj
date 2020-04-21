@@ -14,6 +14,8 @@
 		11654EBB244C325000AA75AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11654EBA244C325000AA75AB /* Assets.xcassets */; };
 		11654EBE244C325000AA75AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11654EBC244C325000AA75AB /* LaunchScreen.storyboard */; };
 		11654EC6244C3A4200AA75AB /* harp.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 11654EC5244C3A4200AA75AB /* harp.mp3 */; };
+		119AFEA8244F147500D75D79 /* SoundFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119AFEA7244F147500D75D79 /* SoundFile.swift */; };
+		119AFEAB244F149F00D75D79 /* WithOutMP3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119AFEAA244F149F00D75D79 /* WithOutMP3.swift */; };
 		11C56B1B244E923400EDCF77 /* NextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C56B1A244E923400EDCF77 /* NextViewController.swift */; };
 		11C56B1D244EE41C00EDCF77 /* PlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C56B1C244EE41C00EDCF77 /* PlayViewController.swift */; };
 /* End PBXBuildFile section */
@@ -28,6 +30,8 @@
 		11654EBD244C325000AA75AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		11654EBF244C325000AA75AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		11654EC5244C3A4200AA75AB /* harp.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = harp.mp3; sourceTree = "<group>"; };
+		119AFEA7244F147500D75D79 /* SoundFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundFile.swift; sourceTree = "<group>"; };
+		119AFEAA244F149F00D75D79 /* WithOutMP3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithOutMP3.swift; sourceTree = "<group>"; };
 		11C56B1A244E923400EDCF77 /* NextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextViewController.swift; sourceTree = "<group>"; };
 		11C56B1C244EE41C00EDCF77 /* PlayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -62,18 +66,44 @@
 		11654EB0244C324B00AA75AB /* MeditateApp */ = {
 			isa = PBXGroup;
 			children = (
+				119AFEA6244F141300D75D79 /* Model */,
+				119AFEA5244F140B00D75D79 /* View */,
+				119AFEA4244F140400D75D79 /* Controller */,
+				11654EBC244C325000AA75AB /* LaunchScreen.storyboard */,
+				11654EBF244C325000AA75AB /* Info.plist */,
+				11654EC5244C3A4200AA75AB /* harp.mp3 */,
+			);
+			path = MeditateApp;
+			sourceTree = "<group>";
+		};
+		119AFEA4244F140400D75D79 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
 				11654EB1244C324B00AA75AB /* AppDelegate.swift */,
 				11654EB3244C324B00AA75AB /* SceneDelegate.swift */,
 				11654EB5244C324B00AA75AB /* ViewController.swift */,
 				11C56B1A244E923400EDCF77 /* NextViewController.swift */,
-				11654EB7244C324B00AA75AB /* Main.storyboard */,
-				11654EBA244C325000AA75AB /* Assets.xcassets */,
-				11654EBC244C325000AA75AB /* LaunchScreen.storyboard */,
-				11654EBF244C325000AA75AB /* Info.plist */,
-				11654EC5244C3A4200AA75AB /* harp.mp3 */,
 				11C56B1C244EE41C00EDCF77 /* PlayViewController.swift */,
 			);
-			path = MeditateApp;
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		119AFEA5244F140B00D75D79 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				11654EB7244C324B00AA75AB /* Main.storyboard */,
+				11654EBA244C325000AA75AB /* Assets.xcassets */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		119AFEA6244F141300D75D79 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				119AFEA7244F147500D75D79 /* SoundFile.swift */,
+				119AFEAA244F149F00D75D79 /* WithOutMP3.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,7 +179,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				11654EB6244C324B00AA75AB /* ViewController.swift in Sources */,
+				119AFEA8244F147500D75D79 /* SoundFile.swift in Sources */,
 				11C56B1D244EE41C00EDCF77 /* PlayViewController.swift in Sources */,
+				119AFEAB244F149F00D75D79 /* WithOutMP3.swift in Sources */,
 				11C56B1B244E923400EDCF77 /* NextViewController.swift in Sources */,
 				11654EB2244C324B00AA75AB /* AppDelegate.swift in Sources */,
 				11654EB4244C324B00AA75AB /* SceneDelegate.swift in Sources */,
