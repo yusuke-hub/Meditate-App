@@ -13,7 +13,7 @@ class SoundFile{
     
     var player:AVAudioPlayer?
     
-    func playSound(fileName:String,extensionName:String){
+    func playSound(fileName:String,extensionName:String,numberOfRepeat: Int){
         
         // 再生する
         let soundURL = Bundle.main.url(forResource: fileName, withExtension: extensionName)
@@ -21,6 +21,7 @@ class SoundFile{
             
             // 効果音を鳴らす
             player = try AVAudioPlayer(contentsOf: soundURL!)
+            player?.numberOfLoops = numberOfRepeat
             player?.play()
         } catch {
             

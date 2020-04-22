@@ -52,8 +52,9 @@ class PlayViewController: UIViewController {
     
     func startTimer(){
         // 開始を示す短い音声ファイルを１回だけ再生する
-        soundFile.playSound(fileName: "harp", extensionName: "mp3")
+        soundFile.playSound(fileName: "harp", extensionName: "mp3", numberOfRepeat: -1)
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerUpdate), userInfo: nil, repeats: true)
+        tapCount = 0
     }
     @objc func timerUpdate(){
         if count2 != 0{
@@ -63,6 +64,8 @@ class PlayViewController: UIViewController {
             minutesLabel.text = String(minute!)
             secondsLabel.text = String(second!)
         }else{
+            soundFile.pauseSound(fileName: "harp", extensionName: "mp3")
+            soundFile.playSound(fileName: "finish", extensionName: "mp3", numberOfRepeat: 0)
             dismiss(animated: true, completion: nil)
         }
     } 
@@ -73,13 +76,31 @@ class PlayViewController: UIViewController {
             soundFile.pauseSound(fileName: "harp", extensionName: "mp3")
             startButton.isEnabled = true
             timer.invalidate()
-        }else{
-            dismiss(animated: true, completion: nil)
         }
-        // 1度停止ボタンを押して、もう1度押した時の処理を記述する
+        // 1度停止ボタンを押して、もう1度押した時の処理
+        else if tapCount >= 2{
             // 瞑想を終了するかどうか確認するダイアログを表示する
-            // はい　→　前の画面に戻る、いいえ → 同じ画面のまま
-                // 経過時間分の値を変数で受け取って、前の画面に渡す
+            let alertController: UIAlertController = UIAlertController(title:"終了しますか？", message: "",preferredStyle: .alert)
+            // はい　→　前の画面に戻る
+            // 経過時間分の値を変数で受け取って、前の画面に渡す
+            let actionPositive = UIAlertAction(title: "はい", style: .default){
+                action in
+                self.dismiss(animated: true, completion: nil)
+            }
+            // いいえ → 同じ画面のまま
+            let actionNegative = UIAlertAction(title: "いいえ", style: .destructive)
+            
+            let actionCancel = UIAlertAction(title: "キャンセル", style: .cancel)
+                   
+                   // actionを追加
+            alertController.addAction(actionPositive)
+             alertController.addAction(actionNegative)
+            alertController.addAction(actionCancel)
+                   
+                   // UIAlertControllerの起動
+            present(alertController, animated: true, completion: nil)
+        }
+
         
     }
 }

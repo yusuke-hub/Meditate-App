@@ -9,7 +9,7 @@
 import Foundation
 class WithOutMP3: SoundFile{
     
-    override func playSound(fileName: String, extensionName: String) {
+    override func playSound(fileName: String, extensionName: String,numberOfRepeat: Int) {
         if extensionName == "mp3"{
             print("このファイルは再生できません")
         }

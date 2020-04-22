@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		11266CFA244FF34E0035D283 /* finish.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 11266CF9244FF34E0035D283 /* finish.mp3 */; };
 		11654EB2244C324B00AA75AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11654EB1244C324B00AA75AB /* AppDelegate.swift */; };
 		11654EB4244C324B00AA75AB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11654EB3244C324B00AA75AB /* SceneDelegate.swift */; };
 		11654EB6244C324B00AA75AB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11654EB5244C324B00AA75AB /* ViewController.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		11266CF9244FF34E0035D283 /* finish.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = finish.mp3; sourceTree = "<group>"; };
 		11654EAE244C324B00AA75AB /* MeditateApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeditateApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11654EB1244C324B00AA75AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		11654EB3244C324B00AA75AB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 				11654EBC244C325000AA75AB /* LaunchScreen.storyboard */,
 				11654EBF244C325000AA75AB /* Info.plist */,
 				11654EC5244C3A4200AA75AB /* harp.mp3 */,
+				11266CF9244FF34E0035D283 /* finish.mp3 */,
 			);
 			path = MeditateApp;
 			sourceTree = "<group>";
@@ -166,6 +169,7 @@
 			files = (
 				11654EBE244C325000AA75AB /* LaunchScreen.storyboard in Resources */,
 				11654EC6244C3A4200AA75AB /* harp.mp3 in Resources */,
+				11266CFA244FF34E0035D283 /* finish.mp3 in Resources */,
 				11654EBB244C325000AA75AB /* Assets.xcassets in Resources */,
 				11654EB9244C324B00AA75AB /* Main.storyboard in Resources */,
 			);
